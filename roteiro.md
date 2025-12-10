@@ -2,13 +2,13 @@
 # criar console OK
 
 # Instalar pacote/Dependências: 
-## "Microsoft.EntityFrameworkCore" Version="8.0"
-## "Microsoft.EntityFrameworkCore.Design" Version="8.0"
-## "Microsoft.EntityFrameworkCore.SqlServer" Version="8.0"
+## "Microsoft.EntityFrameworkCore" Version="8.0" OK
+## "Microsoft.EntityFrameworkCore.Design" Version="8.0" OK
+## "Microsoft.EntityFrameworkCore.SqlServer" Version="8.0" OK
 
 # Criar arquivo na raiz .gitignore OK
 # Cria o projeto no git OK
-# Cria uma branch para Mac
+# Cria uma branch para Mac OK
 
 # cria pasta Data / 
 ## Cria arquivo DataContext
