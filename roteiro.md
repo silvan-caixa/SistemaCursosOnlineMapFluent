@@ -6,8 +6,8 @@
 ## "Microsoft.EntityFrameworkCore.Design" Version="8.0"
 ## "Microsoft.EntityFrameworkCore.SqlServer" Version="8.0"
 
-# Criar arquivo na raiz .gitignore
-# Cria o projeto no git
+# Criar arquivo na raiz .gitignore OK
+# Cria o projeto no git OK
 # Cria uma branch para Mac
 
 # cria pasta Data / 
