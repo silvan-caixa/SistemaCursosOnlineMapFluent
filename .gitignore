@@ -1,0 +1,94 @@
+###############################
+#   SISTEMA OPERACIONAL (macOS)
+###############################
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+###############################
+#   VS CODE
+###############################
+.vscode/
+.history/
+*.code-workspace
+
+###############################
+#   .NET / ASP.NET / C#
+###############################
+bin/
+obj/
+Debug/
+Release/
+x64/
+x86/
+*.dll
+*.exe
+*.app
+*.pdb
+*.mdb
+*.cache
+*.log
+*.tmp
+*.temp
+
+###############################
+#   CONFIGURAÇÕES E USUÁRIO
+###############################
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+###############################
+#   ENTITY FRAMEWORK (MIGRAÇÕES)
+###############################
+*.AssemblyInfoInputs.cache
+*.AssemblyInfo.cs
+EFCoreDesignTimeServices.xml
+
+###############################
+#   NUGET
+###############################
+*.nupkg
+.nuget/
+packages/
+
+###############################
+#   EDITORES E IDEs
+###############################
+.idea/
+*.iml
+*.sublime-workspace
+*.sublime-project
+
+###############################
+#   ARQUIVOS DE BUILD E PUBLICAÇÃO
+###############################
+publish/
+dist/
+
+###############################
+#   ARQUIVOS TEMPORÁRIOS
+###############################
+*.swp
+*.tmp
+*.temp
+*.bak
+*.old
+*.orig
+
+###############################
+#   GIT
+###############################
+*.orig
+*.rej
+
+###############################
+#   SCRIPTS E BANCO (OPCIONAL)
+###############################
+#*.sql
+#*.db
