@@ -11,11 +11,15 @@
 # Cria uma branch para Mac OK
 
 # cria pasta Data / 
-## Cria arquivo DataContext
-### Funcões: OnConfiguring, OnModelCreating, TestConexao. Propriedades: DbSet<Usuario>. Herança: : DbContext
+## Cria arquivo DataContext OK
+### Funcões: 
+-- OnConfiguring OK, 
+-- OnModelCreating, 
+-- TestConexao OK. 
+-- Propriedades: DbSet<Usuario>. Herança: : DbContext
 ## Criar past Mapping /
 ### Criar os arquivos do modelo: CursoMap.cs, AlunoMap.cs ...
-#### class: PostMap : IEntityTypeConfiguration<Post>, Funcoes: Configure
+#### class: PostMap : IEntityTypeConfiguration<Post>, Funcoesclear: Configure
 ##### Table: ToTable. FK:HasKey. Propriedade:Property. Index:HasIndex. Relacionamento: HasOne,HasMany
 
 # 2 ETAPA
