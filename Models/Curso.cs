@@ -11,5 +11,6 @@ public class Curso
     public int InstrutorId { get; set; }
     public Instrutor? Instrutor { get; set; }
     public DateTime DataCriacao { get; set; } = DateTime.Now;
-
+    public List<Aula> Aulas { get; set; } = new();
+    public List<Usuario> Usuarios { get; set; } = new();
 }

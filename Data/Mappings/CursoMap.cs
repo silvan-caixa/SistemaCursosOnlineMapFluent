@@ -51,5 +51,22 @@ public class CursoMap : IEntityTypeConfiguration<Curso>
             .HasConstraintName("FK_CursoCategoria_CategoriaId")
             .OnDelete(DeleteBehavior.NoAction)
             .IsRequired();
+        // builder.HasMany(x=>x.Usuarios)
+        //     .HasMany(x=>x.Cursos)
+        //     .UseIdentityColumn<Dictionary<string, object>>(
+        //         "CursoUsuario", 
+        //         curso => curso.HasOne()
+        //             .HasMany()
+        //             .HasForeignKey("CursoId")
+        //             .HasConstraintName("FK_CursoUsuario_CursoId"),
+        //         usuario => usuario.HasOne()
+        //             .HasMany()
+        //             .HasForeignKey("UsuarioId")
+        //             .HasConstraintName("FK_CursoUsuario_UsuarioId"),
+        //         dataCadastro => dataCadastro.Property(x=>x.DataCadastro)
+        //             .HasColumnType("DateTime")
+        //             .HasName();
+                    
+        //     );
     }
 }
