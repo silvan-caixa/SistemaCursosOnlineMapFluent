@@ -11,19 +11,23 @@
 # Cria uma branch para Mac OK
 
 # cria pasta Data / 
-## Cria arquivo DataContext
-### Funcões: OnConfiguring, OnModelCreating, TestConexao. Propriedades: DbSet<Usuario>. Herança: : DbContext
-## Criar past Mapping /
-### Criar os arquivos do modelo: CursoMap.cs, AlunoMap.cs ...
-#### class: PostMap : IEntityTypeConfiguration<Post>, Funcoes: Configure
-##### Table: ToTable. FK:HasKey. Propriedade:Property. Index:HasIndex. Relacionamento: HasOne,HasMany
+## Cria arquivo DataContext OK
+### Funcões: 
+-- OnConfiguring OK, 
+-- OnModelCreating OK, 
+-- TestConexao OK. 
+-- Propriedades: DbSet<Usuario>. Herança: : DbContext
+## Criar past Mapping OK /
+### Criar os arquivos do modelo: CursoMap.cs, AlunoMap.cs ... OK
+#### class: PostMap : IEntityTypeConfiguration<Post>, Funcoesclear: Configure OK
+##### Table: ToTable. FK:HasKey. Propriedade:Property. Index:HasIndex. Relacionamento: HasOne,HasMany OK
 
 # 2 ETAPA
-# Criar pasta Models
-## Criar os arquivos: Curso, Aluno
+# Criar pasta Models OK
+## Criar os arquivos: Curso, Aluno OK
 
 # 3 ETAPA
-# Cria a migrations
+# Cria a migrations OK
 ### Terminal
 - Comando não funciona
 -- dotnet tool install --global donet-ef
