@@ -27,7 +27,7 @@
 ## Criar os arquivos: Curso, Aluno OK
 
 # 3 ETAPA
-# Cria a migrations
+# Cria a migrations OK
 ### Terminal
 - Comando não funciona
 -- dotnet tool install --global donet-ef

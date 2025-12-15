@@ -35,6 +35,7 @@ public class CursoMap : IEntityTypeConfiguration<Curso>
             .IsRequired();
 
         builder.Property(x => x.DataCriacao)
+            .HasColumnType("DateTime")
             .IsRequired();
         //INDEX
 

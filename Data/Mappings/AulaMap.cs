@@ -27,7 +27,7 @@ public class AulaMap : IEntityTypeConfiguration<Aula>
             .IsRequired();
 
         //INDEX
-        builder.HasIndex(x => x.Titulo)
+        builder.HasIndex(x => new { x.CursoId, x.Titulo })
             .IsUnique();
         //RELACIONAMENTO
         builder.HasOne(x => x.Curso)

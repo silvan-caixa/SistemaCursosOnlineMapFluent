@@ -8,7 +8,7 @@ public class UsuarioMap : IEntityTypeConfiguration<Usuario>
 {
     public void Configure(EntityTypeBuilder<Usuario> builder)
     {
-        builder.ToTable("USUARIO", "SCO");
+        //builder.ToTable("USUARIO", "SCO");
         //PK
         builder.HasKey(x => x.Id)
             .HasName("PK_Usuario_Id");
@@ -28,6 +28,7 @@ public class UsuarioMap : IEntityTypeConfiguration<Usuario>
         builder.Property(x => x.SenhaHash)
             .IsRequired();
         builder.Property(x => x.DataCadastro)
+            .HasColumnType("DateTime")
             .IsRequired();
 
         //INDEX

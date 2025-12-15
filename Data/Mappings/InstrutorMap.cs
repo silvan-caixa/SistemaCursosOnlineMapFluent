@@ -27,6 +27,7 @@ public class InstrutorMap : IEntityTypeConfiguration<Instrutor>
             .HasMaxLength(250)
             .IsRequired();
         builder.Property(x => x.DataCriacao)
+            .HasColumnType("DateTime")
             .IsRequired();
 
         //Index

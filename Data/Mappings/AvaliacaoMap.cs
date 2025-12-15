@@ -23,6 +23,7 @@ public class AvaliacaoMap : IEntityTypeConfiguration<Avaliacao>
             .HasColumnType("Varchar")
             .HasMaxLength(Avaliacao.ComentarioMaxLength);
         builder.Property(x => x.DataAvaliacao)
+            .HasColumnType("DateTime")
             .IsRequired();
         //Index
         builder.HasIndex(x => new { x.CursoId, x.UsuarioId })
@@ -30,11 +31,13 @@ public class AvaliacaoMap : IEntityTypeConfiguration<Avaliacao>
         //Relacionamento
         builder.HasOne(x => x.Usuario)
             .WithMany(x => x.Avaliacoes)
-            .HasForeignKey("FK_Avaliacao_UsuarioId")
+            .HasForeignKey("UsuarioId")
+            .HasConstraintName("FK_Avaliacao_UsuarioId")
             .OnDelete(DeleteBehavior.Cascade);
         builder.HasOne(x => x.Curso)
             .WithMany(x => x.Avaliacoes)
-            .HasForeignKey("FK_Avaliacao_CursoId")
+            .HasForeignKey("CursoId")
+            .HasConstraintName("FK_Avaliacao_CursoId")
             .OnDelete(DeleteBehavior.Cascade);
 
     }

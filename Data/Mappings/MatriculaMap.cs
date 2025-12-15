@@ -22,6 +22,7 @@ public class MatriculaMap : IEntityTypeConfiguration<Matricula>
         builder.Property(x => x.UsuarioId)
             .IsRequired();
         builder.Property(x => x.DataMatricula)
+            .HasColumnType("DateTime")
             .IsRequired();
 
         //Index
