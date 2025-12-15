@@ -1,5 +1,3 @@
-### 15/12 Parei no Model Avaliacao, falta fazer FK
-
 # 1 ETAPA
 # criar console OK
 
@@ -16,17 +14,17 @@
 ## Cria arquivo DataContext OK
 ### Funcões: 
 -- OnConfiguring OK, 
--- OnModelCreating, 
+-- OnModelCreating OK, 
 -- TestConexao OK. 
 -- Propriedades: DbSet<Usuario>. Herança: : DbContext
-## Criar past Mapping /
-### Criar os arquivos do modelo: CursoMap.cs, AlunoMap.cs ...
-#### class: PostMap : IEntityTypeConfiguration<Post>, Funcoesclear: Configure
-##### Table: ToTable. FK:HasKey. Propriedade:Property. Index:HasIndex. Relacionamento: HasOne,HasMany
+## Criar past Mapping OK /
+### Criar os arquivos do modelo: CursoMap.cs, AlunoMap.cs ... OK
+#### class: PostMap : IEntityTypeConfiguration<Post>, Funcoesclear: Configure OK
+##### Table: ToTable. FK:HasKey. Propriedade:Property. Index:HasIndex. Relacionamento: HasOne,HasMany OK
 
 # 2 ETAPA
-# Criar pasta Models
-## Criar os arquivos: Curso, Aluno
+# Criar pasta Models OK
+## Criar os arquivos: Curso, Aluno OK
 
 # 3 ETAPA
 # Cria a migrations
