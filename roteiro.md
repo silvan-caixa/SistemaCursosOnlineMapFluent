@@ -1,3 +1,5 @@
+### 15/12 Parei no Model Avaliacao, falta fazer FK
+
 # 1 ETAPA
 # criar console OK
 

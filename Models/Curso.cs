@@ -13,4 +13,7 @@ public class Curso
     public DateTime DataCriacao { get; set; } = DateTime.Now;
     public List<Aula> Aulas { get; set; } = new();
     public List<Usuario> Usuarios { get; set; } = new();
+    public List<Matricula> Matriculas { get; set; } = new();
+    public List<Avaliacao> Avaliacoes { get; set; } = new();
+
 }

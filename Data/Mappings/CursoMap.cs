@@ -6,7 +6,7 @@ namespace SistemaCursosOnlineMaoFluent;
 
 public class CursoMap : IEntityTypeConfiguration<Curso>
 {
-    public int DescricaoMaxLength { get; private set; }
+    //public int DescricaoMaxLength { get; private set; }
 
     public void Configure(EntityTypeBuilder<Curso> builder)
     {
@@ -28,7 +28,7 @@ public class CursoMap : IEntityTypeConfiguration<Curso>
             .HasMaxLength(Curso.DescricaoMaxLength)
             .IsRequired();
 
-        builder.Property(x => x.CategoriaId)
+        builder.Property(x => x.InstrutorId)
             .IsRequired();
 
         builder.Property(x => x.CategoriaId)
@@ -51,6 +51,8 @@ public class CursoMap : IEntityTypeConfiguration<Curso>
             .HasConstraintName("FK_CursoCategoria_CategoriaId")
             .OnDelete(DeleteBehavior.NoAction)
             .IsRequired();
+
+
         // builder.HasMany(x=>x.Usuarios)
         //     .HasMany(x=>x.Cursos)
         //     .UseIdentityColumn<Dictionary<string, object>>(
@@ -66,7 +68,7 @@ public class CursoMap : IEntityTypeConfiguration<Curso>
         //         dataCadastro => dataCadastro.Property(x=>x.DataCadastro)
         //             .HasColumnType("DateTime")
         //             .HasName();
-                    
+
         //     );
     }
 }
