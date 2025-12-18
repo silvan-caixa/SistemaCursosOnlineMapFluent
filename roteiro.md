@@ -47,3 +47,25 @@
 -- dotnet ef migrations script -o ./script.sql
 
 # 4 ETAPA IMPLEMENTAR REGRA DE NEGOCIO
+# 🧾 1. Escopo
+Sistema onde:
+- Instrutores criam cursos
+- Usuários consomem aulas
+- Usuários avaliam cursos
+- Cursos pertencem a categorias
+# 🧩 2. Regras de Negócio
+- RN01: Instrutor só edita seus cursos  
+- RN02: Usuário só pode avaliar curso matriculado  
+- RN03: Curso publicado só após ter aula  
+- RN04: Matrícula é única (UsuarioId + CursoId)  
+- RN05: Nota de avaliação entre 1 e 5 
+# 🔗 4. Relacionamentos
+- Instrutor 1:N Curso  
+- Categoria 1:N Curso  
+- Curso 1:N Aula  
+- Usuario N:N Curso (via Matricula)  
+- Curso 1:N Avaliacao  
+- Usuario 1:N Avaliacao  
+
+## Implementação
+- CRUD Usuario e Instrutor (Create ok, Read ok, Remove e Update)
