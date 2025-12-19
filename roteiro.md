@@ -49,8 +49,8 @@
 # 4 ETAPA IMPLEMENTAR REGRA DE NEGOCIO
 # 🧾 1. Escopo
 Sistema onde:
-- Instrutores criam cursos
-- Usuários consomem aulas
+- Instrutores criam cursos ok
+- Usuários consomem aulas 
 - Usuários avaliam cursos
 - Cursos pertencem a categorias
 # 🧩 2. Regras de Negócio
@@ -69,3 +69,4 @@ Sistema onde:
 
 ## Implementação
 - CRUD Usuario e Instrutor (Create ok, Read ok, Remove e Update)
+git 

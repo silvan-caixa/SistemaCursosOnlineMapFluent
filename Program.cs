@@ -28,6 +28,7 @@ public class Program
             Console.WriteLine("6. Deletar Instrutor");
             Console.WriteLine("7. Listar Usuario");
             Console.WriteLine("8. Listar Instrutor");
+            Console.WriteLine("9. Instrutores criam cursos");
             Console.WriteLine("0. Sair");
             Console.Write("\nEscolha uma opção: ");
 
@@ -58,6 +59,9 @@ public class Program
                     break;
                 case "8":
                     ListarInstrutor();
+                    break;
+                case "9":
+                    InstrutorCriarCurso();
                     break;
                 case "0":
                     Console.WriteLine("Saindo do sistema...");
@@ -108,6 +112,82 @@ public class Program
                 Console.ReadKey();
             }
         }
+
+
+    }
+
+    private static void InstrutorCriarCurso()
+    {
+        System.Console.WriteLine("INSTRUTORES");
+        System.Console.WriteLine("Nome do Curso: ");
+        var nomeCuros = Console.ReadLine()!;
+        System.Console.WriteLine("Descrição do Curso: ");
+        var descricaoCuros = Console.ReadLine()!;
+
+        var instrutores = db.Instrutores.ToArray();
+        foreach (var item in instrutores)
+        {
+            System.Console.WriteLine($"ID: {item.Id} | Nome: {item.Nome}");
+        }
+        System.Console.WriteLine("SELECIONE ID DO INSTRUTOR PARA ADD CURSO: ");
+        var id = int.Parse(Console.ReadLine()!);
+
+        var idInstrutor = db.Instrutores.FirstOrDefault(x => x.Id == id);
+
+        System.Console.WriteLine("CATEGORIA");
+        var categoriaExist = db.Categorias.Any();
+        if (categoriaExist)
+        {
+            var categorias = db.Categorias.ToArray();
+            foreach (var item in categorias)
+            {
+                System.Console.WriteLine($"ID: {item.Id} | Nome: {item.Nome}");
+            }
+            System.Console.WriteLine("SELECIONE ID DA CATEGORIA: ");
+            var idCategoria = int.Parse(Console.ReadLine()!);
+            var categoria = db.Categorias.FirstOrDefault(x => x.Id == idCategoria);
+
+            if (idInstrutor != null)
+            {
+                var curso = new Curso
+                {
+                    Titulo = nomeCuros,
+                    Descricao = descricaoCuros,
+                    Categoria = categoria,
+                    Instrutor = idInstrutor
+                };
+                db.Cursos.Add(curso);
+                //  Console.ReadKey();
+
+            }
+            else
+            {
+                System.Console.WriteLine("CADASTRAR CATEGORIA");
+                System.Console.WriteLine("Nome: ");
+                var nome = Console.ReadLine()!;
+
+                if (idInstrutor != null)
+                {
+                    var curso = new Curso
+                    {
+                        Titulo = nomeCuros,
+                        Descricao = descricaoCuros,
+                        Categoria = new Categoria { Nome = nome },
+                        Instrutor = idInstrutor
+                    };
+                    db.Cursos.Add(curso);
+                }
+
+            }
+            db.SaveChanges();
+            System.Console.WriteLine("Salvo");
+
+            Console.ReadKey();
+        }
+
+
+
+
 
 
     }
